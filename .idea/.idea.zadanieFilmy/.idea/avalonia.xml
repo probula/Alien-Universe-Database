@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="zadanieFilmy/Views/FilmDetails.axaml" value="zadanieFilmy/zadanieFilmy.csproj" />
         <entry key="zadanieFilmy/Views/MainWindow.axaml" value="zadanieFilmy/zadanieFilmy.csproj" />
       </map>
     </option>
