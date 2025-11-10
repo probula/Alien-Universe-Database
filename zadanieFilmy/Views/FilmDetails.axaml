@@ -1,8 +1,20 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="zadanieFilmy.Views.FilmDetails">
-    Welcome to Avalonia!
+             xmlns:vm="clr-namespace:zadanieFilmy.ViewModels"
+             xmlns:models="clr-namespace:zadanieFilmy.Models"
+             x:Class="zadanieFilmy.Views.FilmDetails"
+             x:DataType="models:Film">
+
+    <ScrollViewer Margin="10">
+        <StackPanel Spacing="5">
+            <TextBlock Text="{Binding Rezyser}"/>
+            <TextBlock Text="{Binding Scenariusz}"/>
+            <TextBlock Text="{Binding Gatunek}"/>
+            <TextBlock Text="{Binding RokPremiery}"/>
+            <TextBlock Text="{Binding CzasTrwania}"/>
+            <TextBlock Text="{Binding Ocena}"/>
+            <TextBlock Text="{Binding GlownePostacie}"/>
+            <TextBlock Text="{Binding Statek}"/>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

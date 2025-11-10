@@ -2,6 +2,7 @@
 using System.Reactive;
 using System.Reactive.Linq;
 using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 using zadanieFilmy.Models;
 using zadanieFilmy.ViewModels;
 
@@ -103,12 +104,8 @@ public class MainWindowViewModel : ReactiveObject
                 Ciekawostka = "Film pierwotnie miał być zatytułowany „Paradise Lost”, a reżyser planował jeszcze jedną część łączącą fabułę z oryginalnym „Obcym” z 1979 roku."
             }
         };
+        [Reactive]
+        public Film SelectedFilm { get; set; }
    
-        private Film? _selectedFilm;
-        public Film? SelectedFilm
-        {
-            get => _selectedFilm;
-            set => this.RaiseAndSetIfChanged(ref _selectedFilm, value);
-        }
     
 }

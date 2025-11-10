@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:models="clr-namespace:zadanieFilmy.Models"
+        xmlns:views="clr-namespace:zadanieFilmy.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="zadanieFilmy.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -13,7 +14,7 @@
         
         <StackPanel Margin="20" Spacing="20" Orientation="Vertical">
                 <TextBlock Text="Lista filmów" FontSize="20" Margin="0,0,0,10"/>
-                <ListBox ItemsSource="{Binding Filmy}" SelectedItem="{Binding SelectedFilm}" Height="300">
+                <ListBox ItemsSource="{Binding Filmy}" Height="300" SelectedItem="{Binding SelectedFilm}">
                         <ListBox.ItemTemplate>
                                 <DataTemplate>
                                         <StackPanel>
@@ -23,6 +24,7 @@
                                 </DataTemplate>
                         </ListBox.ItemTemplate>
                 </ListBox>
+                
+                <views:FilmDetails DataContext="{Binding SelectedFilm}" />
           </StackPanel>
-    
 </Window>
