@@ -9,8 +9,10 @@ using zadanieFilmy.ViewModels;
 
 namespace zadanieFilmy.ViewModels;
 
-public class MainWindowViewModel : ReactiveObject
+public class MainWindowViewModel : ViewModelBase
 {
+    
+    
    public ObservableCollection<Film> Filmy { get; } = new()
         {
             new Film
@@ -103,9 +105,10 @@ public class MainWindowViewModel : ReactiveObject
                 OpisFabuly = "Załoga statku kolonizacyjnego Covenant odkrywa nieznaną planetę, idealną do osiedlenia. Na miejscu natrafiają jednak na Davida – syntetyka ocalałego z Prometeusza – oraz nowe formy obcych stworzeń, które mogą zakończyć ludzką ekspansję w kosmosie.",
                 Ciekawostka = "Film pierwotnie miał być zatytułowany „Paradise Lost”, a reżyser planował jeszcze jedną część łączącą fabułę z oryginalnym „Obcym” z 1979 roku."
             }
+            
         };
         [Reactive]
         public Film SelectedFilm { get; set; }
-   
+
     
 }

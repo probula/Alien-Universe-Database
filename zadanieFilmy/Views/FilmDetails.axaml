@@ -5,16 +5,21 @@
              x:Class="zadanieFilmy.Views.FilmDetails"
              x:DataType="models:Film">
 
+    
     <ScrollViewer Margin="10">
         <StackPanel Spacing="5">
-            <TextBlock Text="{Binding Rezyser}"/>
-            <TextBlock Text="{Binding Scenariusz}"/>
-            <TextBlock Text="{Binding Gatunek}"/>
-            <TextBlock Text="{Binding RokPremiery}"/>
-            <TextBlock Text="{Binding CzasTrwania}"/>
-            <TextBlock Text="{Binding Ocena}"/>
-            <TextBlock Text="{Binding GlownePostacie}"/>
-            <TextBlock Text="{Binding Statek}"/>
+            <TextBlock Text="FILM"/>
+            <TextBlock Text="----"/>
+            <TextBlock Text="{Binding Rezyser, StringFormat='Reżyser: {0}'}"/>
+            <TextBlock Text="{Binding Scenariusz, StringFormat='Scenariusz: {0}'}"/>
+            <TextBlock Text="{Binding Gatunek, StringFormat='Gatunek: {0}'}"/>
+            <TextBlock Text="{Binding RokPremiery, StringFormat='Rok premiery: {0}'}"/>
+            <TextBlock Text="{Binding CzasTrwania, StringFormat='Czas trwania: {0}'}"/>
+            <TextBlock Text="{Binding Ocena, StringFormat='Ocena: {0}'}"/>
+            <TextBlock Text="{Binding GlownePostacie, StringFormat='Glowne postacie: {0}'}"/>
+            <TextBlock Text="{Binding Statek, StringFormat='Statek: {0}'}"/>
+            <TextBlock Text="{Binding OpisFabuly, StringFormat='Opis fabuly: {0}'}"/>
+            <TextBlock Text="{Binding Ciekawostka, StringFormat='Ciekawostka: {0}'}"/>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

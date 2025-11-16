@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace zadanieFilmy.Models;
 
 public class Film
