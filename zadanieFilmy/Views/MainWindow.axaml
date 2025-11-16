@@ -12,6 +12,7 @@
         Title="zadanieFilmy"
         FontFamily="Segoe UI, Arial, sans-serif">
         
+        <ScrollViewer>
         <StackPanel Margin="20" Spacing="20" Orientation="Vertical">
                 <TextBlock Text="Lista filmów" FontSize="20" Margin="0,0,0,10"/>
                 <ListBox ItemsSource="{Binding Filmy}" Height="300" SelectedItem="{Binding SelectedFilm}">
@@ -24,7 +25,14 @@
                                 </DataTemplate>
                         </ListBox.ItemTemplate>
                 </ListBox>
-                
                 <views:FilmDetails DataContext="{Binding SelectedFilm}" />
+                <Button Content="Pokaż postacie" Command="{Binding PokazInfoPostacie}" />
+                
+                <views:FilmCharacters />
+
+
+
+
           </StackPanel>
+                </ScrollViewer>
 </Window>

@@ -14,8 +14,7 @@ public class Film
     public double Ocena { get; set; }
     public string GlownePostacie { get; set; } = "";
     public string Statek { get; set; } = "";
-    
-    
     public string OpisFabuly { get; set; } = "";
     public string Ciekawostka { get; set; } = "";
+    public int Id { get; set; }
 }

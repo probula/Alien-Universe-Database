@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace zadanieFilmy.Models;
 
 public class Postac
@@ -11,4 +13,6 @@ public class Postac
     public string Charakterystyka { get; set; } = "";
     public string Los { get; set; } = "";
     public string Ciekawostka { get; set; } = "";
+    public string Film {get; set;} = "";
+    public List<int> FilmIds { get; set; } = new();
 }
