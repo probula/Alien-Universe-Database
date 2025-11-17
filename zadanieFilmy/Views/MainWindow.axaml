@@ -11,28 +11,31 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="zadanieFilmy"
         FontFamily="Segoe UI, Arial, sans-serif">
-        
-        <ScrollViewer>
+
+    <ScrollViewer>
         <StackPanel Margin="20" Spacing="20" Orientation="Vertical">
-                <TextBlock Text="Lista filmów" FontSize="20" Margin="0,0,0,10"/>
-                <ListBox ItemsSource="{Binding Filmy}" Height="300" SelectedItem="{Binding SelectedFilm}">
-                        <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                        <StackPanel>
-                                                <TextBlock Text="{Binding TytulPolski}" FontWeight="Bold"/>
-                                                <TextBlock Text="{Binding TytulOryginalny}" FontStyle="Italic"/>
-                                        </StackPanel>
-                                </DataTemplate>
-                        </ListBox.ItemTemplate>
-                </ListBox>
-                <views:FilmDetails DataContext="{Binding SelectedFilm}" />
-                <Button Content="Pokaż postacie" Command="{Binding PokazInfoPostacie}" />
-                
-                <views:FilmCharacters />
 
+            <TextBlock Text="Lista filmów" FontSize="20" Margin="0,0,0,10"/>
+            
+            <ListBox ItemsSource="{Binding Filmy}" 
+                     SelectedItem="{Binding SelectedFilm}" 
+                     Height="300">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding TytulPolski}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding TytulOryginalny}" FontStyle="Italic"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
 
+            <views:FilmDetails DataContext="{Binding SelectedFilm}" />
 
+            <Button Content="Pokaż postacie" Command="{Binding PokazInfoPostacie}" />
 
-          </StackPanel>
-                </ScrollViewer>
+            <views:FilmCharacters DataContext="{Binding}" />
+
+        </StackPanel>
+    </ScrollViewer>
 </Window>
