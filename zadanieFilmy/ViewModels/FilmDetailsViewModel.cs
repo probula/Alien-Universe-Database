@@ -107,6 +107,5 @@ public class FilmDetailsViewModel
             }
             
         };
-        [Reactive]
-        public Film SelectedFilm { get; set; }
+        
 }

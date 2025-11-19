@@ -14,7 +14,13 @@
                     <StackPanel>
                         <TextBlock Text="{Binding ImieINazwisko}" FontWeight="Bold"/>
                         <TextBlock Text="{Binding Rola}" />
-                        <TextBlock Text="{Binding Aktor}" FontStyle="Italic"/>
+                        <TextBlock Text="{Binding Aktor}"/>
+                        <TextBlock Text="{Binding Rasa}"/>
+                        <TextBlock Text="{Binding RokUrodzeniaFikcyjny}"/>
+                        <TextBlock Text="{Binding FunkcjaWZalodze, StringFormat='Funkcja w załodze: {0}'}"/>
+                        <TextBlock Text="{Binding Charakterystyka, StringFormat='Charakterystyka: {0}'}"/>
+                        <TextBlock Text="{Binding Los, StringFormat='Los: {0}'}"/>
+                        <TextBlock Text="{Binding Ciekawostka, StringFormat='Ciekawostka: {0}'}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
