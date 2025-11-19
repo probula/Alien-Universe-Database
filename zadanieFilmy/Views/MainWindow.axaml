@@ -34,7 +34,7 @@
 
             <Button Content="Pokaż postacie" Command="{Binding PokazInfoPostacie}" />
 
-            <views:FilmCharacters DataContext="{Binding}" />
+            <views:FilmCharacters />
 
         </StackPanel>
     </ScrollViewer>

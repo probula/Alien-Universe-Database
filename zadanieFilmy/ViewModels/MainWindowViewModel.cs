@@ -14,13 +14,13 @@ public class MainWindowViewModel : ReactiveObject
 
 {
     
-    private readonly FilmCharactersViewModel _charactersVM = new FilmCharactersViewModel();
+     FilmCharactersViewModel _charactersVM = new FilmCharactersViewModel();
     public ObservableCollection<Film> Filmy { get; }
 
     public ObservableCollection<Postac> Postacie { get; } = new ObservableCollection<Postac>();
     public ReactiveCommand<Unit, Unit> PokazInfoPostacie { get; }
     
-    [Reactive]
+    [Reactive] //Fody!!! - automatyczne powiadamianie
     public Film SelectedFilm { get; set; }
     
 
